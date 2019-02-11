@@ -1,0 +1,47 @@
+网页嵌入
+
+1.
+
+<object width="425" height="344" data="https://www.youtube.com/embed/F9Bo89m2f6g"></object>
+
+2.
+
+<embed src="https://www.youtube.com/embed/F9Bo89m2f6g" allowfullscreen="true" width="425" height="344">
+
+3.
+
+<iframe  width="425" height="344" src="https://www.youtube.com/embed/F9Bo89m2f6g" frameborder="0" allowfullscreen></iframe>
+
+秒拍
+
+<video id="banner-video" controls src="视频链接.MP4"></video>
+
+https://blog.csdn.net/aimi_aimi/article/details/78909908
+接口嵌入(腾讯)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js"
+        type="text/javascript" ></script>
+<div id="mod_player"></div>
+<script>
+    var video = new tvp.VideoInfo();
+    video.setVid("i001216370f");
+    var player =new tvp.Player();
+    player.create({
+        width:480,
+        height:360,
+        video:video,
+        modId:"mod_player",
+        autoplay:true,
+
+    });
+    switchToOcx();
+</script>
+
+</body>
+</html>

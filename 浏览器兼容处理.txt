@@ -1,0 +1,72 @@
+<script>
+    jQuery(function(){
+        //浏览器兼容处理
+        jQuery('.slide_top').click(function(){
+            if(/Mozilla/i.test(navigator.userAgent)){
+                jQuery('html').animate({scrollTop:0},500)
+            }
+        })
+        jQuery('.mx').mouseover(function(){
+            jQuery(this).css('display','none');
+            jQuery(this).next('.xy').css('display','block');
+        })
+        jQuery('.xy').mouseout(function(){
+            jQuery(this).prev('.mx').css('display','block');
+            jQuery(this).css('display','none');
+        })
+
+        var html="<div style='text-align:center;'><h4 style='margin-top:20px;'>关注博牛社区</h4><img width='350' height='350' src='https://pic.rfqcyp.com/20170905/bn_59ae092a7791e.jpg' /></div>"
+        jQuery('.weixin').click(function(){
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                skin: 'yourclass',
+                content: html
+            });
+        });
+        var appHtml="<style>\n" +
+            "    .app_download{\n" +
+            "        text-align:center;\n" +
+            "    }\n" +
+            "    .ios_download{\n" +
+            "        display:inline-block;\n" +
+            "        width:300px;\n" +
+            "        margin-right:20px;\n" +
+            "    }\n" +
+            "    .an_download{\n" +
+            "        display:inline-block;\n" +
+            "        width:300px;\n" +
+            "    }\n" +
+            "</style>\n" +
+            "<div class=\"app_download\">\n" +
+            "    <section class=\"ios_download\">\n" +
+            "        <h1 style='font-size:16px;line-height:40px;color:red'>IOS下载</h1>\n" +
+            "        <p>\n" +
+            "            <img src=\"https://pic.rfqcyp.com/20180329/bn_5abc4c5b818de.png\"/>\n" +
+            "        </p>\n" +
+            "\n" +
+            "    </section>\n" +
+            "    <section class=\"an_download\">\n" +
+            "        <h1 style='font-size:16px;line-height:40px;color:green'>安卓下载</h1>\n" +
+            "        <p>\n" +
+            "            <img src=\"https://pic.rfqcyp.com/20180329/bn_5abc4da36662e.png\"/>\n" +
+            "        </p>\n" +
+            "    </section>\n" +
+            "</div>";
+            jQuery('.app').click(function(){
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 0,
+                    area:['720px','360px'],
+                    shadeClose: true,
+                    skin: 'yourclass',
+                    content: appHtml
+                });
+            });
+
+    })
+
+</script> 

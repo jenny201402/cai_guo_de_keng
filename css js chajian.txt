@@ -1,0 +1,11 @@
+rili **
+jianpan **
+lunbotu **
+ <marquee onmouseover="this.stop()" onmouseout="this.start()">whhhh</marquee> //文字左移
+p{white-space: nowrap;}强制不换行
+tancc layer.open({}) layer不识别
+
+lay-skin 
+input srk jujiao dianliang
+slider没有自动左滑
+点击到下一页 页码

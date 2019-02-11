@@ -1,0 +1,71 @@
+bootstrap（js/css)文件引入html
+如果在不采用各种编译、打包工具的情况下，只想在html里引用，那直接写就可以：
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+layui
+<link rel="stylesheet" href="static/layui/css/layui.css">
+<script src="static/layui/lay/dest/layui.all.js"></script>
+
+<script>
+    //获得模块的引用
+    var layer = layui.layer;
+    layer.msg("Hello World");
+
+    //直接用
+    layer.msg("666")
+</script> 
+通过layui.use加载模块
+layui.use(['模块名','模块名'], function(){
+    //加载完成的回调函数
+    //推荐方法写在这里面，因为不知道什么时候加载完毕
+});
+<link rel="stylesheet" href="static/layui/css/layui.css">
+<script src="static/layui/layui.js"></script>
+
+<script>
+console.info(layui);//一个对象，里面什么都没有
+
+layui.use(['layer'], function(){
+    
+    //加载结束后会把模块名曝露在layui上，可以直接使用layui.xx调用
+    var layer = layui.layer;
+    console.info(this);//等价于layui
+   
+});
+</script> 
+自定义模块引入
+//layui模块的定义
+layui.define([mods], function(exports){
+    //mods，你的模块依赖的模块，先加载它们
+    //自定义的api
+    var api={};
+    exports('mod', api);//把mod绑定到layui对象上，注意mod的名字必须喝use的时候一样
+});  
+使用方法如下
+<link rel="stylesheet" href="static/layui/css/layui.css">
+<script src="static/layui/layui.js"></script>
+
+//指定引入某个目录下的模块
+layui.config({
+    base: 'static/modules/' //你的模块目录
+}).use('mymod'); //加载入口
+
+//或者先声明模块目录
+layui.config({
+    base: 'static/modules/' //你的模块目录
+});
+
+//然后再使用，先根据名字判断是否是layui内置的模块，然后引入声明的模块目录下的mymod.js文件
+layui.use(['mymod'], function(){
+    //...
+});
+效果如下
+t {
+    mymod:Object,
+    v:"1.0.9_rls",
+    __proto__:Object
+}
+
+layui.mymod.say()

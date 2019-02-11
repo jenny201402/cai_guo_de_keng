@@ -1,0 +1,3 @@
+http://www.php.cn/xiazai/code/234 居中布局
+http://www.php.cn/xiazai/code/897 左（图）中（文字链接超链接）右（li文字链接）布局，上下结构
+http://www.php.cn/xiazai/code/894上下结构，左边图片右边文字解释+超链接

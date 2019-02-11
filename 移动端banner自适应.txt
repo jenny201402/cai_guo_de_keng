@@ -1,0 +1,4 @@
+移动端banner或大图自适应不能给高度，如果设为css里面的背景图，可以给padding ；//padding: .6rem;
+或者直接用img标签放在html，高度宽度可不设。
+
+container position:relative;内的背景图片高度不能自适应，改用padding或者img标签

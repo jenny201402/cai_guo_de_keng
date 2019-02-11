@@ -1,0 +1,16 @@
+  <div class="ad">
+        <img src="img/ad.png" alt="">
+    </div>
+	.ad{
+    width:7.13rem;
+}
+.ad>img{
+    width:100%;
+    height:2.01rem;
+    /*background: url("../img/ad.png")no-repeat;*/
+    background-size:cover;
+    margin-top:0.17rem;
+    margin-bottom:0.22rem;
+    border-radius:.03rem;
+    margin-left:.2rem;
+}

@@ -1,0 +1,24 @@
+repeat-y:auto;/repeart-y:scroll;¹ö¶¯ 
+overflow:visible/hidden;
+display:none/block~inline-block; 
+initialized="true"
+visibility:hidden/collapse/visible;
+
+em{
+	font-weight:100;
+	color: #999;  /color: #878787;
+	width: 5em
+	float: left;
+	width: 75px;
+	color: #999
+
+}
+dd {
+    	line-height: 1.8em;
+    	text-indent: 1em;
+}
+
+a {
+   	 background-color: #f6f6f6
+}
+display:none/list-item;

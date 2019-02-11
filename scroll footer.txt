@@ -1,0 +1,12 @@
+﻿<script>
+        jQuery(document).ready(function () { //本人习惯这样写了
+            jQuery(window).scroll(function () {
+                if (jQuery(window).scrollTop() > 148) {
+                    jQuery('.AsideAdviser').addClass('fixed');iPro
+                } else if (jQuery('.AsideAdviser').hasClass('fixed')) {
+                    jQuery('.AsideAdviser').removeClass('fixed');
+                }
+            })
+
+        })
+//scrollbar

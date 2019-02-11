@@ -1,0 +1,29 @@
+ jQuery(function(){
+
+        jQuery(window).on('scroll',function(){
+
+            var st = jQuery(document).scrollTop();
+            if( st>0 ){
+                if( jQuery('#wp').length !== 0  ){
+                    var w = jQuery(window).width(),wp = jQuery('#wp').width();
+                    if( (w-wp)/2 > 70 )
+                        jQuery('#scrolltop').css({'left':(w-wp)/2+wp+10});
+                    else{
+                        jQuery('#scrolltop').css({'right':'1%'});
+                    }
+                }
+                jQuery('#scrolltop').fadeIn(function(){
+                    jQuery(this).removeClass('dn');
+                });
+            }else{
+                jQuery('#scrolltop').fadeOut(function(){
+                    jQuery(this).addClass('dn');
+                });
+            }
+        });
+        jQuery('#scrolltop .scrolltopa').on('click',function(){
+            jQuery('html,body').animate({'scrollTop':0},300);
+        });
+
+
+    });

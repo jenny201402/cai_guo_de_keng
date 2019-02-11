@@ -1,0 +1,2 @@
+    background:url("../img/bofang.png")no-repeat center,#ffffff url("../img/main.png");
+    background:#ffffff url("../img/bofang.png")no-repeat center;url("../img/main.png");

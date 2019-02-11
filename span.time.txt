@@ -1,0 +1,29 @@
+<script>
+setInterval('calTime()',1000)
+var specialTime='2019-09-10 13:14:27';
+console.log(specialTime);
+
+function calTime(){
+var dueDate=specialTime;
+var due=new Date(dueDate);
+dueTime=due.getTime();
+var now=new Date();
+nowTime=now.getTime();
+if(nowTime>dueTime){
+jQuery('.cal-time').text("已经到期");
+}else{
+var dis=parseInt((dueTime-nowTime)/1000);
+var day=parseInt(dis/(60*60*24));
+var dayLeft=dis%(60*60*24);
+var hours=parseInt(dayLeft/(60*60));
+var hoursLeft=dayLeft%(60*60);
+var minutes=parseInt(hoursLeft/60);
+var seconds=hoursLeft%60;
+jQuery('.cal-day').text(day);
+jQuery('.cal-hours').text(hours);
+jQuery('.cal-minutes').text(minutes);
+jQuery('.cal-seconds').text(seconds);
+}
+}
+
+</script>

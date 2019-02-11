@@ -1,0 +1,2 @@
+backgruond-position选定图片要用float:left;
+踩过的坑不要再踩

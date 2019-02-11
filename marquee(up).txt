@@ -1,0 +1,26 @@
+function beginroll(one, two, three) {
+    var speed = 40
+    var demoScrollTop = $(one).scrollTop();
+    var demo1OffsetHeight = $(two).height();
+    var demohtml = $(two).html();
+    $(three).html(demohtml);
+
+    function Marquee() {
+        if (demoScrollTop >= demo1OffsetHeight) {
+            demoScrollTop = 0;
+        } else {
+            demoScrollTop = demoScrollTop + 1;
+        }
+        $(one).scrollTop(demoScrollTop);
+    }
+
+    var MyMar = setInterval(Marquee, speed);
+    $(one).mouseover(function () {
+        clearInterval(MyMar);
+    })
+    $(one).mouseout(function () {
+        MyMar = setInterval(Marquee, speed);
+    })
+}
+
+beginroll("#text1", "#text2", "#text3");

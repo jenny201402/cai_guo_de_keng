@@ -1,0 +1,119 @@
+  <div class="happy">
+                <p>独乐乐不如众乐乐,呼朋唤友来看片！</p>
+                <p>欢乐加倍，激情满满！</p>
+                <p>使用您的专属分享链接或二维码把本站分享给朋友，将获得金币奖励！</p>
+                <p>金币可用于观看VIP级别的精彩视频！</p>
+                <p>分享专属链接到微信、QQ好友、朋友圈、论坛会得到更多点击哟</p>
+                <p>每个朋友的点击系统会奖励1个金币，每个朋友通过你的专属链接注册系统会奖励6个金币</p>
+                <p style="" href="javascript:void(0);" class="close" data-clipboard-text="http://www.baidu.com/username" id="btn_share">复制链接</p>
+                <p>专属分享链接：http//:www.baidu.com/usernamewww.baidu.com/username</p>
+                <div class="alert alert-warning" style="display:none;text-align: center;" id="my_alert" onclick="$('#my_alert').hide();">
+                    <span style="font-size:15px;letter-spacing: 2px;">链接已复制成功！</span>
+                </div>
+             </div>
+			 .happy{
+    width:606px;
+    margin:0 auto;
+    text-align: center;
+    color:#555555;
+    letter-spacing: 1px;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height:42px;
+    font-size:13px;
+}
+<style>
+    .close:focus, .close:hover{
+        color: #555555;
+        text-decoration: none;
+        cursor: pointer;
+        filter: alpha(opacity=50);
+         opacity:1;
+    }
+    .alert-warning{
+        background: rgba(241, 86, 67,.9);
+        border:none;
+    }
+    .alert-warning{
+        color:#ffffff
+    }
+    .alert{
+        padding: 0;
+        width: 213px;
+        margin: auto;
+    }
+    .close{
+        font-size: 13px;
+        letter-spacing: 2px;
+        color: #555555;
+        opacity: 1;
+        float: right;
+        line-height: 42px;
+    }
+    .container{
+        width:1200px;
+        padding-left:0;
+        padding-right:0;
+    }
+    p{
+        margin:0;
+    }
+    a{
+        text-decoration: none;
+        color:#555555;
+    }
+    a:hover{
+        text-decoration: none;
+        color:#555555;
+    }
+    a:focus{
+        text-decoration: none;
+        color:#555555;
+
+    }
+</style>
+<script>
+    $(function () {
+        $$.copyLine();
+    })
+</script>
+ blockSit:function(){
+        //blocksit define
+        $(window).load( function() {
+            $('#container').BlocksIt({
+                numOfCol: 5,
+                offsetX: 8,
+                offsetY: 8,
+                blockElement: '.grid'
+            });
+        });
+//window resize
+        var currentWidth = 1100;
+        $(window).resize(function() {
+            var winWidth = $(window).width();
+            var conWidth;
+            if(winWidth < 660) {
+                conWidth = 440;
+                col = 2
+            } else if(winWidth < 880) {
+                conWidth = 660;
+                col = 3
+            } else if(winWidth < 1100) {
+                conWidth = 880;
+                col = 4;
+            } else {
+                conWidth = 1100;
+                col = 5;
+            }
+
+            if(conWidth != currentWidth) {
+                currentWidth = conWidth;
+                $('#container').width(conWidth);
+                $('#container').BlocksIt({
+                    numOfCol: col,
+                    offsetX: 8,
+                    offsetY: 8
+                });
+            }
+        });
+    },

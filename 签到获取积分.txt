@@ -1,0 +1,28 @@
+    $('.signin').click(function(){
+        var obj=$(this);
+        url=$(this).attr('url');
+        $.post(url,'',function(msg){
+            msg=JSON.parse(msg);
+            if(msg.code==1){
+                obj.removeClass("signin").addClass('signin2');
+                obj.text('ÒÑÇ©µ½');
+                if(msg.type==0){
+                    var jifen=parseInt($('.jifen').text());
+                    $('.jifen').text(jifen+parseInt(msg.num));
+                }else if(msg.type==1){
+                    var xinbobi=parseInt($('.xinbobi').text());
+                    $('.xinbobi').text(xinbobi+parseInt(msg.num));
+                }
+            }
+            layer.msg(msg.msg);
+        })
+    })
+
+    $('.protocal').click(function(){
+        if($(this).is(':checked')){
+            $('.author_material').removeClass('btn-default').addClass('btn-success').removeAttr('disabled');
+        }
+        if(!$(this).is(':checked')){
+            $('.author_material').removeClass('btn-success').addClass('btn-default').attr('disabled',1);
+        }
+    })

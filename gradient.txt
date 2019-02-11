@@ -1,0 +1,12 @@
+ .layui-layer-btn .layui-layer-btn0 {
+        width: 5.2rem;
+        height: 1.8rem;
+        background: -webkit-linear-gradient(#f6d154, #f7c350, #f8ae4b); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(#f6d154, #f7c350, #f8ae4b); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(#f6d154, #f7c350, #f8ae4b); /* Firefox 3.6 - 15 */
+        background: linear-gradient(#f6d154, #f7c350, #f8ae4b); /* 标准的语法 */
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+
+ background: -webkit-linear-gradient(to right/to left/to bottom/to top,#f6d154, #f7c350, #f8ae4b); /* Safari 5.1 - 6.0 */

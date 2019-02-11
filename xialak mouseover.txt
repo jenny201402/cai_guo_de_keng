@@ -1,0 +1,3 @@
+$('li.dropdown').mouseover(function(){$(this).addClass('open');}).mouseout(function() {$(this).removeClass('open')})
+
+Ô­ÎÄ£ºhttps://blog.csdn.net/chpch/article/details/50134179 
